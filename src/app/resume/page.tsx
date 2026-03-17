@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="flex flex-col gap-4">
@@ -43,19 +45,30 @@ function Job({
 export default function Resume() {
   return (
     <div className="flex flex-col gap-10 max-w-2xl">
-      <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-semibold tracking-tight">Tejaswi Vinnakota</h1>
-        <p className="text-zinc-500">Principal Product Manager</p>
-        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-zinc-500">
-          <a href="mailto:tejaswivinnakota@gmail.com" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            tejaswivinnakota@gmail.com
-          </a>
-          <a href="https://linkedin.com/in/tejaswivinnakota" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            linkedin.com/in/tejaswivinnakota
-          </a>
-          <a href="https://github.com/tejaswivinnakota" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            github.com/tejaswivinnakota
-          </a>
+      <div className="flex items-center gap-4">
+        <div className="relative shrink-0 overflow-hidden rounded-full" style={{width: 72, height: 72}}>
+          <Image
+            src="/profile.jpg"
+            alt="Tejaswi Vinnakota"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+        <div>
+          <h1 className="text-3xl font-semibold tracking-tight">Tejaswi Vinnakota</h1>
+          <p className="text-zinc-500">Principal Product Manager</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-zinc-500">
+            <a href="mailto:tejaswivinnakota@gmail.com" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+              tejaswivinnakota@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/tejaswivinnakota" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+              linkedin.com/in/tejaswivinnakota
+            </a>
+            <a href="https://github.com/tejaswivinnakota" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+              github.com/tejaswivinnakota
+            </a>
+          </div>
         </div>
       </div>
 
