@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllArticles } from "@/lib/articles";
 
 export default function Home() {
@@ -7,9 +8,20 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-12">
       <section className="flex flex-col gap-4">
-        <h1 className="text-4xl font-semibold tracking-tight">
-          Tejaswi Vinnakota
-        </h1>
+        <div className="flex items-center gap-5">
+          <div className="relative w-18 h-18 shrink-0 overflow-hidden rounded-full" style={{width: 72, height: 72}}>
+            <Image
+              src="/profile.jpg"
+              alt="Tejaswi Vinnakota"
+              fill
+              className="object-cover object-center"
+              priority
+            />
+          </div>
+          <h1 className="text-4xl font-semibold tracking-tight">
+            Tejaswi Vinnakota
+          </h1>
+        </div>
         <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-xl leading-relaxed">
           Product leader focused on AI and enterprise software. Writing about
           model alignment, product strategy, and the philosophy of building
