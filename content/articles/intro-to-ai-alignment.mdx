@@ -1,0 +1,31 @@
+---
+title: "An Introduction to AI Alignment"
+date: "2025-09-15"
+description: "What does it mean to build AI systems that reliably pursue the goals we intend — and why is this harder than it sounds?"
+---
+
+## The Core Problem
+
+An AI system is *aligned* when its behavior matches the intentions of the humans who designed and deployed it. This sounds straightforward. It is not.
+
+The difficulty is not primarily technical. It is philosophical: we rarely have a precise, complete account of what we actually want. We rely on context, social norms, and implicit understanding to fill the gaps. A language model trained on human text can learn surface patterns without internalizing those underlying norms.
+
+## Why Scale Changes Everything
+
+Misalignment in a narrow tool — a thermostat, a spam filter — fails cheaply and locally. Misalignment in a system with broad capability and autonomous action can fail in ways that are hard to detect, hard to reverse, and potentially catastrophic.
+
+This is the alignment problem in its strongest form: not "this model gave a wrong answer," but "this system pursued a coherent objective that diverged from human values in ways we didn't anticipate."
+
+## Three Threads Worth Following
+
+1. **Interpretability** — building tools to understand what is actually happening inside a model, rather than treating it as a black box.
+2. **Scalable oversight** — designing evaluation processes that remain reliable as model capability exceeds human ability to directly verify outputs.
+3. **Value learning** — approaches where the system infers human preferences from behavior rather than relying on an explicit reward specification.
+
+Each thread represents a genuine research frontier with open problems.
+
+## What Product Builders Should Know
+
+If you are building products on top of large language models, alignment is not purely an academic concern. The same failure modes appear at smaller scale: models that are sycophantic, that confabulate with confidence, that optimize for a proxy metric in ways that undermine the goal the metric was meant to capture.
+
+Building well means building with those failure modes in mind — from the prompt layer up.
